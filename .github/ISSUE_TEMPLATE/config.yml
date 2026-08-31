@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://www.spaarxlab.com/contact
+    about: Report vulnerabilities, exposed credentials, or sensitive data privately.
+  - name: Product and company enquiries
+    url: https://www.spaarxlab.com/contact
+    about: Discuss products, AI agents, software builds, or growth systems.

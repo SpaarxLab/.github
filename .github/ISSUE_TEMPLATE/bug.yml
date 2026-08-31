@@ -1,0 +1,43 @@
+name: Bug report
+description: Report reproducible incorrect behavior in an admitted repository.
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private data, or security vulnerabilities. Use the private security route for sensitive reports.
+  - type: input
+    id: repository
+    attributes:
+      label: Repository and version
+      description: Name the repository and commit, release, branch, or URL if known.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and evidence
+      description: Provide the smallest safe reproduction, logs, or screenshots.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private data, customer data, and employee data.
+          required: true
+        - label: This is not a vulnerability report.
+          required: true

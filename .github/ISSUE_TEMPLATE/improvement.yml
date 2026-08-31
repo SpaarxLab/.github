@@ -1,0 +1,38 @@
+name: Improvement proposal
+description: Propose a bounded improvement tied to a user or operator outcome.
+title: "improvement: "
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository or product area
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or missed outcome
+      description: Who experiences it, and what happens today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Smallest useful change
+      description: Describe the narrowest outcome worth testing.
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof and stop condition
+      description: How would we know it helped, failed, or should stop?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Authority, data, and compatibility boundaries
+      description: Name approvals, protected systems, data, or existing behavior involved.
+    validations:
+      required: true

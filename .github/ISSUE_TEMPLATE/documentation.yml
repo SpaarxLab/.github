@@ -1,0 +1,24 @@
+name: Documentation correction
+description: Report unclear, missing, stale, or conflicting documentation.
+title: "docs: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Document or page
+      description: Link the file, page, or section.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is unclear or incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Current authority or evidence
+      description: Link the decision, source, behavior, or receipt that supports the correction.
+    validations:
+      required: true
