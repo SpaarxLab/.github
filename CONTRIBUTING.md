@@ -26,3 +26,31 @@ commercial value. Keep claims at the level the evidence supports.
 
 Repository-specific contribution instructions and approval requirements always
 take precedence over this default.
+
+## Clone, fork, and branch
+
+Clone the target repo when you have write access, or use GitHub's Fork button
+when permitted. In a fork, `origin` should be your fork and `upstream` the
+original repository:
+
+```bash
+# Replace OWNER and REPO with the repository you are contributing to.
+git clone https://github.com/OWNER/REPO.git
+cd REPO
+# Fork contributors only: replace UPSTREAM_OWNER with the original owner.
+git remote add upstream https://github.com/UPSTREAM_OWNER/REPO.git
+git fetch upstream
+git remote show upstream
+```
+
+For a shared clone, use `origin` instead of `upstream` in fetch/show commands
+and do not add a second remote. Check `HEAD branch` in the output; branch
+names vary. Create a feature branch from that remote's default branch, make
+your change, run the target repo's documented checks, inspect `git diff`, and
+commit only intended files. Push the feature branch to `origin` and open a PR
+against the original repository's default branch. Do not change repository
+visibility to work around a private-fork restriction.
+
+When setup fails, include the OS, runtime version, repo commit, command, and
+redacted error. Never attach an entire environment file. Improvements to setup
+should update the target README and its safe configuration example together.
